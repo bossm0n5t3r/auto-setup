@@ -17,8 +17,8 @@ sudo apt --fix-broken install -y
 # Delete firefox and default vim.
 echo -e "${c}Deleting firefox and default vim"; $r
 sudo apt purge --auto-remove -y firefox* vim-*
-sudo apt autoremove
-sudo apt autoclean
+sudo apt autoremove -y
+sudo apt autoclean -y
 
 # Installing vim and setting vim as default editor
 echo -e "${c}Installing vim and setting vim as default editor"; $r

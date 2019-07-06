@@ -12,6 +12,5 @@ sudo apt update && sudo apt install -y yarn
 echo "" >> .zshrc
 echo "# Set Yarn global path" >> .zshrc
 echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> .zshrc
-source .zshrc
 ( set -x; yarn -v )
 echo -e "${c}Yarn Installed Successfully."; $r

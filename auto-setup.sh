@@ -29,7 +29,8 @@ sudo update-alternatives --config editor
 echo -e "${c}Installing complete packages"; $r
 sudo apt install -y \
 apt-transport-https \
-bleachbit build-essential \
+bleachbit \
+build-essential \
 chromium-browser \
 curl \
 fonts-naver-d2coding \
@@ -43,6 +44,7 @@ telegram-desktop \
 tlp \
 tlp-rdw \
 tree \
+wget \
 zsh
 
 # Starting tlp
@@ -67,7 +69,7 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt update -y
 sudo apt install -y code
-sudo rm -f microsoft.gpg
+sudo rm -rf microsoft.gpg
 echo -e "${c}Visual Studio Code Installed Successfully."; $r
 
 # Setting up Java
@@ -92,10 +94,17 @@ echo -e "${c}Creating Directory named 'gitFolders' inside $HOME directory."; $r
 cd
 mkdir gitFolders
 
-# Installing my vim plugins
-echo -e "${c}Installing my vim plugins"; $r
+# Cloning my git repositories
+echo -e "${c}Cloning my git repositories"; $r
 cd gitFolders
 git clone https://github.com/bossm0n5t3r/dotfiles.git
+git clone https://github.com/bossm0n5t3r/ubuntu-auto-setup.git
+git clone https://github.com/bossm0n5t3r/git-status-checker.git
+cd
+echo -e "${c}My git repositories Cloned Successfully!"; $r
+
+# Installing my vim plugins
+echo -e "${c}Installing my vim plugins"; $r
 cd
 cp -rp gitFolders/dotfiles/.vim/vimrc .vim/
 vim .vim/vimrc
@@ -127,3 +136,4 @@ chsh -s `which zsh`
 # After reboot
 echo -e "${c}Now, you should reboot or shutdown now!"; $r
 echo -e "${c}After reboot, you should run install-oh-my-zsh.sh and install-yarn.sh!"; $r
+echo -e "${c}WELCOME TO UBUNTU!"; $r

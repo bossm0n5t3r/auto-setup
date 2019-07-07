@@ -51,6 +51,22 @@ zsh
 echo -e "${c}Starting tlp"; $r
 sudo tlp start
 
+# Show Battery Percentage on Top Bar [Debian (gnome)]
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+# Change button layout [Debian (gnome)]
+gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:"
+
+# Show clock seconds and weekday [Debian (gnome)]
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+
+# Change default fonts to D2Coding [Debian (gnome)]
+gsettings set org.gnome.desktop.interface font-name 'D2Coding 11'
+gsettings set org.gnome.desktop.interface document-font-name 'D2Coding 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'D2Coding 13'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'D2Coding Bold 11'
+
 # Setting up Git
 echo -e "${c}Setting up Git"; $r
 ( set -x; git --version )
@@ -77,9 +93,9 @@ echo -e "${c}Setting up Java"; $r
 sudo apt install -y openjdk-12-jdk
 sudo apt install -y openjdk-12-doc
 ( set -x ; java -version )
-echo "" >> /etc/profile
-echo "# Set JAVA_HOME" >> /etc/profile
-echo "export JAVA_HOME=/usr/lib/jvm/java-12-openjdk-amd64" >> /etc/profile
+echo "" >> ~/.profile
+echo "# Set JAVA_HOME" >> ~/.profile
+echo "export JAVA_HOME=/usr/lib/jvm/java-12-openjdk-amd64" >> ~/.profile
 echo -e "${c}Java Installed Successfully!"; $r
 
 # Installing vim-plug
@@ -124,9 +140,9 @@ cd
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update && sudo apt install -y yarn
-echo "" >> /etc/profile
-echo "# Set Yarn global path" >> /etc/profile
-echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> /etc/profile
+echo "" >> ~/.profile
+echo "# Set Yarn global path" >> ~/.profile
+echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> ~/.profile
 ( set -x; yarn -v )
 echo -e "${c}Yarn Installed Successfully."; $r
 
@@ -140,6 +156,10 @@ echo -e "${c}auto-setup.sh Deleted Successfully!"; $r
 echo -e "${c}Updating and upgrading to finish auto-setup script"; $r
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install -y
+
+# Changing bash shell to zsh
+echo -e "${c}Changing bash shell to zsh"; $r
+chsh -s `which zsh`
 
 # Finish
 echo -e "${c}Now, you should reboot or shutdown now!"; $r

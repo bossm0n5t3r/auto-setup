@@ -117,6 +117,18 @@ sudo apt install -y nodejs
 ( set -x; nodejs -v )
 echo -e "${c}NodeJS Installed Successfully!"; $r
 
+# Installing Yarn
+echo -e "${c}Installing Yarn"; $r
+cd
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install -y yarn
+echo "" >> /etc/profile
+echo "# Set Yarn global path" >> /etc/profile
+echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> /etc/profile
+( set -x; yarn -v )
+echo -e "${c}Yarn Installed Successfully."; $r
+
 # Deleting auto-setup.sh
 echo -e "${c}Deleting auto-setup.sh"; $r
 cd

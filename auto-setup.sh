@@ -44,8 +44,7 @@ telegram-desktop \
 tlp \
 tlp-rdw \
 tree \
-wget \
-zsh
+wget
 
 # Starting tlp
 echo -e "${c}Starting tlp"; $r
@@ -129,11 +128,7 @@ echo -e "${c}Updating and upgrading to finish auto-setup script"; $r
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install -y
 
-# Changing bash shell to zsh
-echo -e "${c}Changing bash shell to zsh"; $r
-chsh -s `which zsh`
-
-# After reboot
+# Finish
 echo -e "${c}Now, you should reboot or shutdown now!"; $r
 echo -e "${c}After reboot, you should run install-oh-my-zsh.sh and install-yarn.sh!"; $r
 echo -e "${c}WELCOME TO UBUNTU!"; $r

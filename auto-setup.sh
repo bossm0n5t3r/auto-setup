@@ -44,7 +44,8 @@ telegram-desktop \
 tlp \
 tlp-rdw \
 tree \
-wget
+wget \
+zsh
 
 # Starting tlp
 echo -e "${c}Starting tlp"; $r

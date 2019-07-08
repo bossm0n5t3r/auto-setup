@@ -3,7 +3,7 @@
 ##################################################################################################
 # Author: bossm0n5t3r                                                                            #
 # Description: Auto setup bash script to setup required programs after doing fresh install.      #
-# Tested against Debian based distributions like Ubuntu 18.04.                                   #
+# Tested against Debian based distributions like Ubuntu 19.04.                                   #
 ##################################################################################################
 
 c='\e[32m' # Coloured echo (Green)
@@ -163,5 +163,5 @@ chsh -s `which zsh`
 
 # Finish
 echo -e "${c}Now, you should reboot or shutdown now!"; $r
-echo -e "${c}After reboot, you should run install-oh-my-zsh.sh and install-yarn.sh!"; $r
+echo -e "${c}After reboot, you should run after-auto-setup!"; $r
 echo -e "${c}WELCOME TO UBUNTU!"; $r

@@ -14,7 +14,7 @@ echo -e "${c}Updating and upgrading before performing further operations"; $r
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install -y
 
-# Delete firefox and default vim.
+# Delete firefox and default vim
 echo -e "${c}Deleting firefox and default vim"; $r
 sudo apt purge --auto-remove -y firefox* vim-*
 sudo apt autoremove -y
@@ -25,7 +25,7 @@ echo -e "${c}Installing vim and setting vim as default editor"; $r
 sudo apt install -y vim
 sudo update-alternatives --config editor
 
-# Installing complete packages (important)
+# Installing all the packages I need
 echo -e "${c}Installing complete packages"; $r
 sudo apt install -y \
 apt-transport-https \

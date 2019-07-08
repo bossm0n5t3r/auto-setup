@@ -1,1 +1,41 @@
 # ubuntu-auto-setup
+
+auto-setup.sh is a simple bash script (compatible with Debian based distributions like Ubuntu) to install and setup necessary softwares/tools after doing Fresh Install.
+
+> Script is completely based on programming tools as well as some apps I use regularly like Visual Studio Code, Chromium etc.
+> You can Modify it according to your need.
+
+## Usage
+
+```bash
+wget https://raw.githubusercontent.com/bossm0n5t3r/ubuntu-auto-setup/master/auto-setup.sh
+chmod +x auto-setup.sh
+./auto-setup.sh
+```
+
+## Structure
+
+It'll perform the following operations:
+
+1. Delete firefox and default vim.
+2. Install vim and set vim as default editor.
+3. Install all the packages I need.
+4. Custom gsettings.
+5. Setup Git Global Config. (It'll ask for your name and email)
+6. Install VSCode, Java etc.
+
+## List
+
+* Bleachbit
+* Chromium
+* D2Coding font
+* Java
+* LibreOffice
+* Telegram
+* vim-plug
+* Visual Studio Code
+* zsh
+
+## Note
+
+Tested on Ubuntu 19.04, but it should work with other Debian based distributions as well.

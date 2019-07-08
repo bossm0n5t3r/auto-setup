@@ -6,6 +6,7 @@ r='tput sgr0' #Reset colour after echo
 # Setting Visual Studio Code
 echo -e "${c}Setting Visual Studio Code"; $r
 code
+read -p "Press ENTER to continue"
 cp -rp $HOME/gitFolders/dotfiles/.vscode/settings.json $HOME/.config/Code/User/
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension formulahendry.code-runner

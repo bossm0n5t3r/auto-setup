@@ -1,5 +1,7 @@
 # ubuntu-auto-setup
 
+This reposioty is based on [shubhampathak/autosetup](https://github.com/shubhampathak/autosetup).
+
 auto-setup.sh is a simple bash script (compatible with Debian based distributions like Ubuntu) to install and setup necessary softwares/tools after doing Fresh Install.
 
 > Script is completely based on programming tools as well as some apps I use regularly like Visual Studio Code, Chromium etc.

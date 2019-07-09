@@ -150,7 +150,7 @@ echo -e "${c}Yarn Installed Successfully."; $r
 echo -e "${c}Installing Anaconda"; $r
 cd
 wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
-./Anaconda3-2019.03-Linux-x86_64.sh
+bash Anaconda3-2019.03-Linux-x86_64.sh
 echo -e "${c}Anaconda Installed Successfully."; $r
 
 # Deleting auto-setup.sh

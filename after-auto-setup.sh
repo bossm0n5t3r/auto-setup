@@ -31,3 +31,8 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension ritwickdey.LiveServer
 echo -e "${c}Visual Studio Code Setting Successfully."; $r
+
+# Setting Anaconda
+echo -e "${c}Setting Anaconda"; $r
+$HOME/anaconda3/bin/conda init zsh
+echo -e "${c}Anaconda Setting Successfully."; $r

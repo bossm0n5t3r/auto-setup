@@ -13,6 +13,9 @@ auto-setup.sh is a simple bash script (compatible with Debian based distribution
 wget https://raw.githubusercontent.com/bossm0n5t3r/ubuntu-auto-setup/master/auto-setup.sh
 chmod +x auto-setup.sh
 ./auto-setup.sh
+
+# After reboot,
+bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
 ```
 
 ## Structure
@@ -24,10 +27,12 @@ It'll perform the following operations:
 3. Install all the packages I need.
 4. Custom gsettings.
 5. Setup Git Global Config. (It'll ask for your name and email)
-6. Install VSCode, Java etc.
+6. Install VSCode, Java etc. (See below list)
+7. Cloning my personal git repositories.
 
 ## List
 
+* Anaconda
 * Bleachbit
 * Chromium
 * D2Coding font
@@ -37,6 +42,7 @@ It'll perform the following operations:
 * vim-plug
 * Visual Studio Code
 * zsh
+* My personal git repositories
 
 ## Note
 

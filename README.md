@@ -9,6 +9,8 @@ auto-setup.sh is a simple bash script (compatible with Debian based distribution
 
 ## Usage
 
+### Linux (Debian based distributions like Ubuntu)
+
 ```bash
 wget https://raw.githubusercontent.com/bossm0n5t3r/ubuntu-auto-setup/master/auto-setup.sh
 chmod +x auto-setup.sh
@@ -16,6 +18,21 @@ chmod +x auto-setup.sh
 
 # After reboot,
 bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
+```
+
+### Windows 10
+
+> #### Prerequisite Tools
+> 
+> * [Git](https://git-scm.com/)
+> * [Visual Studio Code](https://code.visualstudio.com/)
+> * This repository
+
+```bash
+# Only configure Visual Studio Code after it installed
+# Open git bash in this repository folder
+
+bash config-vscode.sh
 ```
 
 ## Structure

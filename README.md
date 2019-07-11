@@ -1,4 +1,4 @@
-# ubuntu-auto-setup
+# auto-setup
 
 This reposioty is based on [shubhampathak/autosetup](https://github.com/shubhampathak/autosetup).
 

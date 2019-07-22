@@ -16,6 +16,7 @@ code --install-extension eamodio.gitlens
 code --install-extension spywhere.guides
 code --install-extension Equinusocio.vsc-material-theme
 code --install-extension hoovercj.vscode-power-mode
+code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
 # Web
 code --install-extension dsznajder.es7-react-js-snippets

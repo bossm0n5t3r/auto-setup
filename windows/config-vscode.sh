@@ -13,16 +13,22 @@ code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension formulahendry.code-runner
 code --install-extension ExodiusStudios.comment-anchors
 code --install-extension eamodio.gitlens
-code --install-extension spywhere.guides
 code --install-extension Equinusocio.vsc-material-theme
 code --install-extension hoovercj.vscode-power-mode
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
 # Web
-code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension ritwickdey.LiveServer
+# Node.js
+code --install-extension esbenp.prettier-vscode
 # Markdown
 code --install-extension yzhang.markdown-all-in-one
 # Python
 code --install-extension ms-python.python
+# Java
+code --install-extension redhat.java
+code --install-extension vscjava.vscode-java-debug
+code --install-extension vscjava.vscode-java-test
+code --install-extension tushortz.java-snippets
+code --install-extension tushortz.java-imports-snippets
 echo -e "${c}Visual Studio Code Setting Successfully."; $r

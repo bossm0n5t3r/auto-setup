@@ -7,7 +7,6 @@ r='tput sgr0' #Reset colour after echo
 echo -e "${c}Setting Visual Studio Code"; $r
 code
 read -p "Press ENTER to continue"
-cp -rp ~/Desktop/gitFolders/dotfiles/.vscode/settings.json ~/AppData/Roaming/Code/User/
 # Basic
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension formulahendry.code-runner
@@ -31,4 +30,5 @@ code --install-extension vscjava.vscode-java-debug
 code --install-extension vscjava.vscode-java-test
 code --install-extension tushortz.java-snippets
 code --install-extension tushortz.java-imports-snippets
+echo -e "${c}Move settings.json to ~/AppData/Roaming/Code/User/."; $r
 echo -e "${c}Visual Studio Code Setting Successfully."; $r

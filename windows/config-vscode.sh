@@ -30,5 +30,7 @@ code --install-extension vscjava.vscode-java-debug
 code --install-extension vscjava.vscode-java-test
 code --install-extension tushortz.java-snippets
 code --install-extension tushortz.java-imports-snippets
+# MySQL
+code --install-extension formulahendry.vscode-mysql
 echo -e "${c}Move settings.json to ~/AppData/Roaming/Code/User/."; $r
 echo -e "${c}Visual Studio Code Setting Successfully."; $r

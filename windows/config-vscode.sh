@@ -18,7 +18,7 @@ code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
 # Web
 code --install-extension ritwickdey.LiveServer
-# Node.js
+# Prettier
 code --install-extension esbenp.prettier-vscode
 # Markdown
 code --install-extension yzhang.markdown-all-in-one

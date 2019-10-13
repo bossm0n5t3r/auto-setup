@@ -90,12 +90,11 @@ echo -e "${c}Visual Studio Code Installed Successfully."; $r
 
 # Setting up Java
 echo -e "${c}Setting up Java"; $r
-sudo apt install -y openjdk-8-jdk openjdk-8-doc
-sudo update-alternatives --config java
+sudo apt install -y openjdk-13-jdk openjdk-13-doc
 ( set -x ; java -version )
 echo "" >> ~/.profile
 echo "# Set JAVA_HOME" >> ~/.profile
-echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> ~/.profile
+echo "export JAVA_HOME=/usr/lib/jvm/java-13-openjdk-amd64" >> ~/.profile
 echo -e "${c}Java Installed Successfully!"; $r
 
 # Installing vim-plug

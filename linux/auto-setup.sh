@@ -90,12 +90,12 @@ echo -e "${c}Visual Studio Code Installed Successfully."; $r
 
 # Setting up Java
 echo -e "${c}Setting up Java"; $r
-sudo apt install -y openjdk-12-jdk
-sudo apt install -y openjdk-12-doc
+sudo apt install -y openjdk-8-jdk
+sudo apt install -y openjdk-8-doc
 ( set -x ; java -version )
 echo "" >> ~/.profile
 echo "# Set JAVA_HOME" >> ~/.profile
-echo "export JAVA_HOME=/usr/lib/jvm/java-12-openjdk-amd64" >> ~/.profile
+echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> ~/.profile
 echo -e "${c}Java Installed Successfully!"; $r
 
 # Installing vim-plug
@@ -114,8 +114,7 @@ mkdir gitFolders
 echo -e "${c}Cloning my git repositories"; $r
 cd gitFolders
 git clone https://github.com/bossm0n5t3r/dotfiles.git
-git clone https://github.com/bossm0n5t3r/ubuntu-auto-setup.git
-git clone https://github.com/bossm0n5t3r/git-status-checker.git
+git clone https://github.com/bossm0n5t3r/auto-setup.git
 cd
 echo -e "${c}My git repositories Cloned Successfully!"; $r
 
@@ -149,8 +148,8 @@ echo -e "${c}Yarn Installed Successfully."; $r
 # Installing Anaconda
 echo -e "${c}Installing Anaconda"; $r
 cd
-wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
-bash Anaconda3-2019.03-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+bash Anaconda3-2019.07-Linux-x86_64.sh
 echo -e "${c}Anaconda Installed Successfully."; $r
 
 # Deleting auto-setup.sh
@@ -159,11 +158,11 @@ cd
 rm -rf auto-setup.sh
 echo -e "${c}auto-setup.sh Deleted Successfully!"; $r
 
-# Deleting Anaconda3-2019.03-Linux-x86_64.sh
-echo -e "${c}Deleting Anaconda3-2019.03-Linux-x86_64.sh"; $r
+# Deleting Anaconda3-2019.07-Linux-x86_64.sh
+echo -e "${c}Deleting Anaconda3-2019.07-Linux-x86_64.sh"; $r
 cd
-rm -rf Anaconda3-2019.03-Linux-x86_64.sh
-echo -e "${c}Anaconda3-2019.03-Linux-x86_64.sh Deleted Successfully!"; $r
+rm -rf Anaconda3-2019.07-Linux-x86_64.sh
+echo -e "${c}Anaconda3-2019.07-Linux-x86_64.sh Deleted Successfully!"; $r
 
 # Final Update and Upgrade Command
 echo -e "${c}Updating and upgrading to finish auto-setup script"; $r

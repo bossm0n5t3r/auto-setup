@@ -90,8 +90,8 @@ echo -e "${c}Visual Studio Code Installed Successfully."; $r
 
 # Setting up Java
 echo -e "${c}Setting up Java"; $r
-sudo apt install -y openjdk-8-jdk
-sudo apt install -y openjdk-8-doc
+sudo apt install -y openjdk-8-jdk openjdk-8-doc
+sudo update-alternatives --config java
 ( set -x ; java -version )
 echo "" >> ~/.profile
 echo "# Set JAVA_HOME" >> ~/.profile

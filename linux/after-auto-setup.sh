@@ -29,6 +29,7 @@ code --install-extension Equinusocio.vsc-material-theme
 code --install-extension hoovercj.vscode-power-mode
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
+code --install-extension wakatime.vscode-wakatime
 # Web
 code --install-extension ritwickdey.LiveServer
 # Prettier

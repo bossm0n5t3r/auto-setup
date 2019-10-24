@@ -62,7 +62,7 @@ echo -e "${c}Python Setup Successfully!"; $r
 
 # Update pip
 echo -e "${c}Update pip"; $r
-sudo pip install -U pip
+sudo pip3 install -U pip
 ( set -x; pip --version )
 
 # Show Battery Percentage on Top Bar [Debian (gnome)]

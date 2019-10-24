@@ -40,6 +40,7 @@ intel-microcode \
 libreoffice \
 net-tools \
 ntp \
+python3-pip \
 telegram-desktop \
 tlp \
 tlp-rdw \
@@ -50,6 +51,19 @@ zsh
 # Starting tlp
 echo -e "${c}Starting tlp"; $r
 sudo tlp start
+
+# Setting up Python
+echo -e "${c}Setting up Python"; $r
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+sudo update-alternatives --config python
+( set -x; python --version )
+echo -e "${c}Python Setup Successfully!"; $r
+
+# Update pip
+echo -e "${c}Update pip"; $r
+sudo pip install -U pip
+( set -x; pip --version )
 
 # Show Battery Percentage on Top Bar [Debian (gnome)]
 gsettings set org.gnome.desktop.interface show-battery-percentage true

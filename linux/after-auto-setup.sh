@@ -45,10 +45,11 @@ code --install-extension vscjava.vscode-java-test
 code --install-extension tushortz.java-snippets
 code --install-extension tushortz.java-imports-snippets
 # MySQL
-code --install-extension formulahendry.vscode-mysql
+# code --install-extension formulahendry.vscode-mysql
 echo -e "${c}Visual Studio Code Setting Successfully."; $r
 
 # Setting Anaconda
-echo -e "${c}Setting Anaconda"; $r
-$HOME/anaconda3/bin/conda init zsh
-echo -e "${c}Anaconda Setting Successfully."; $r
+# 
+# echo -e "${c}Setting Anaconda"; $r
+# $HOME/anaconda3/bin/conda init zsh
+# echo -e "${c}Anaconda Setting Successfully."; $r

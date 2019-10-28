@@ -40,6 +40,7 @@ intel-microcode \
 libreoffice \
 net-tools \
 ntp \
+python3-pip \
 telegram-desktop \
 tlp \
 tlp-rdw \
@@ -50,6 +51,19 @@ zsh
 # Starting tlp
 echo -e "${c}Starting tlp"; $r
 sudo tlp start
+
+# Setting up Python
+echo -e "${c}Setting up Python"; $r
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+sudo update-alternatives --config python
+( set -x; python --version )
+echo -e "${c}Python Setup Successfully!"; $r
+
+# Update pip
+echo -e "${c}Update pip"; $r
+sudo pip3 install -U pip
+( set -x; pip --version )
 
 # Show Battery Percentage on Top Bar [Debian (gnome)]
 gsettings set org.gnome.desktop.interface show-battery-percentage true
@@ -145,23 +159,25 @@ echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> ~/.profile
 echo -e "${c}Yarn Installed Successfully."; $r
 
 # Installing Anaconda
-echo -e "${c}Installing Anaconda"; $r
-cd
-wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
-bash Anaconda3-2019.07-Linux-x86_64.sh
-echo -e "${c}Anaconda Installed Successfully."; $r
+# 
+# echo -e "${c}Installing Anaconda"; $r
+# cd
+# wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+# bash Anaconda3-2019.07-Linux-x86_64.sh
+# echo -e "${c}Anaconda Installed Successfully."; $r
+
+# Deleting Anaconda3-2019.07-Linux-x86_64.sh
+# 
+# echo -e "${c}Deleting Anaconda3-2019.07-Linux-x86_64.sh"; $r
+# cd
+# rm -rf Anaconda3-2019.07-Linux-x86_64.sh
+# echo -e "${c}Anaconda3-2019.07-Linux-x86_64.sh Deleted Successfully!"; $r
 
 # Deleting auto-setup.sh
 echo -e "${c}Deleting auto-setup.sh"; $r
 cd
 rm -rf auto-setup.sh
 echo -e "${c}auto-setup.sh Deleted Successfully!"; $r
-
-# Deleting Anaconda3-2019.07-Linux-x86_64.sh
-echo -e "${c}Deleting Anaconda3-2019.07-Linux-x86_64.sh"; $r
-cd
-rm -rf Anaconda3-2019.07-Linux-x86_64.sh
-echo -e "${c}Anaconda3-2019.07-Linux-x86_64.sh Deleted Successfully!"; $r
 
 # Final Update and Upgrade Command
 echo -e "${c}Updating and upgrading to finish auto-setup script"; $r

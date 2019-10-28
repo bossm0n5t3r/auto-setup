@@ -52,7 +52,7 @@ It'll perform the following operations:
 
 ## List
 
-- Anaconda
+- ~~Anaconda~~ (Leave as Comments)
 - Bleachbit
 - Chromium
 - D2Coding font

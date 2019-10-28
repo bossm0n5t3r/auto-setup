@@ -3,7 +3,7 @@
 ##################################################################################################
 # Author: bossm0n5t3r                                                                            #
 # Description: Auto setup bash script to setup required programs after doing fresh install.      #
-# Tested against Debian based distributions like Ubuntu 19.04.                                   #
+# Tested against Debian based distributions like Ubuntu 19.10.                                   #
 ##################################################################################################
 
 c='\e[32m' # Coloured echo (Green)

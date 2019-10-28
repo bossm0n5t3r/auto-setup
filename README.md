@@ -23,11 +23,11 @@ bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
 ### Windows 10
 
 > #### Prerequisite Tools
-> 
-> * [Git](https://git-scm.com/)
-> * [Visual Studio Code](https://code.visualstudio.com/)
-> * MySQL (If you use this)
-> * This repository
+>
+> - [Git](https://git-scm.com/)
+> - [Visual Studio Code](https://code.visualstudio.com/)
+> - MySQL (If you use this)
+> - This repository
 
 ```bash
 # Only configure Visual Studio Code after it installed
@@ -43,25 +43,27 @@ It'll perform the following operations:
 1. Delete firefox and default vim.
 2. Install vim and set vim as default editor.
 3. Install all the packages I need.
-4. Custom gsettings.
-5. Setup Git Global Config. (It'll ask for your name and email)
-6. Install VSCode, Java etc. (See below list)
-7. Cloning my personal git repositories.
+4. Python 3.7 default Setup
+5. Setup pip and update
+6. Custom gsettings.
+7. Setup Git Global Config. (It'll ask for your name and email)
+8. Install VSCode, Java etc. (See below list)
+9. Cloning my personal git repositories.
 
 ## List
 
-* Anaconda
-* Bleachbit
-* Chromium
-* D2Coding font
-* Java
-* LibreOffice
-* Telegram
-* vim-plug
-* Visual Studio Code
-* zsh
-* My personal git repositories
+- Anaconda
+- Bleachbit
+- Chromium
+- D2Coding font
+- Java
+- LibreOffice
+- Telegram
+- vim-plug
+- Visual Studio Code
+- zsh
+- My personal git repositories
 
 ## Note
 
-Tested on Ubuntu 19.04, but it should work with other Debian based distributions as well.
+Tested on Ubuntu 19.10, but it should work with other Debian based distributions as well.

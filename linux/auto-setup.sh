@@ -40,6 +40,7 @@ intel-microcode \
 libreoffice \
 net-tools \
 ntp \
+python3.7 \
 python3-pip \
 telegram-desktop \
 tlp \

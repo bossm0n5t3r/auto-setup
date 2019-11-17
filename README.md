@@ -30,7 +30,7 @@ bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
 > - This repository
 
 ```bash
-# Only configure Visual Studio Code after it installed
+# Configure basic git setup and install Visual Studio Code Extensions after it installed
 # Open git bash in this repository folder
 
 bash config-vscode.sh

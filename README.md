@@ -32,7 +32,7 @@ bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
 # Configure basic git setup and install Visual Studio Code Extensions after it installed
 # Open git bash in this repository folder
 
-bash config-vscode.sh
+bash auto-setup.sh
 ```
 
 ## Structure

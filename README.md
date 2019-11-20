@@ -26,7 +26,6 @@ bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
 >
 > - [Git](https://git-scm.com/)
 > - [Visual Studio Code](https://code.visualstudio.com/)
-> - MySQL (If you use this)
 > - This repository
 
 ```bash

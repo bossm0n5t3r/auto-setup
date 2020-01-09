@@ -12,9 +12,9 @@ auto-setup.sh is a simple bash script (compatible with Debian based distribution
 ### Linux (Debian based distributions like Ubuntu)
 
 ```bash
-wget https://raw.githubusercontent.com/bossm0n5t3r/ubuntu-auto-setup/master/auto-setup.sh
-chmod +x auto-setup.sh
-./auto-setup.sh
+wget https://tinyurl.com/auto-setup
+chmod +x auto-setup
+./auto-setup
 
 # After reboot,
 bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh

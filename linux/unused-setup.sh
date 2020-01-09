@@ -4,7 +4,6 @@ c='\e[32m' # Coloured echo (Green)
 r='tput sgr0' #Reset colour after echo
 
 # Setting Anaconda
-
 echo -e "${c}Setting Anaconda"; $r
 $HOME/anaconda3/bin/conda init zsh
 echo -e "${c}Anaconda Setting Successfully."; $r

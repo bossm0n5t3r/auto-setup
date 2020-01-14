@@ -19,6 +19,5 @@ echo -e "${c}oh-my-zsh Installed Successfully."; $r
 echo -e "${c}Setting Visual Studio Code"; $r
 code
 read -p "Press ENTER to continue"
-cp -rp $HOME/gitFolders/dotfiles/.vscode/settings.json $HOME/.config/Code/User/
 code --install-extension Shan.code-settings-sync
 echo -e "${c}Visual Studio Code Setting Successfully."; $r

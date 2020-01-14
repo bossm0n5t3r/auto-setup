@@ -32,6 +32,7 @@ apt-transport-https \
 bleachbit \
 build-essential \
 chromium-browser \
+clang-format \
 curl \
 fonts-naver-d2coding \
 git \

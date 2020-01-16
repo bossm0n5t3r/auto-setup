@@ -178,7 +178,7 @@ echo -e "${c}Yarn Installed Successfully."; $r
 # Deleting auto-setup.sh
 echo -e "${c}Deleting auto-setup.sh"; $r
 cd
-rm -rf auto-setup.sh
+rm -rf auto-setup
 echo -e "${c}auto-setup.sh Deleted Successfully!"; $r
 
 # Final Update and Upgrade Command

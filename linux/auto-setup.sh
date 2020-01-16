@@ -175,11 +175,11 @@ echo -e "${c}Yarn Installed Successfully."; $r
 # rm -rf Anaconda3-2019.07-Linux-x86_64.sh
 # echo -e "${c}Anaconda3-2019.07-Linux-x86_64.sh Deleted Successfully!"; $r
 
-# Deleting auto-setup.sh
-echo -e "${c}Deleting auto-setup.sh"; $r
+# Deleting auto-setup
+echo -e "${c}Deleting auto-setup"; $r
 cd
 rm -rf auto-setup
-echo -e "${c}auto-setup.sh Deleted Successfully!"; $r
+echo -e "${c}auto-setup Deleted Successfully!"; $r
 
 # Final Update and Upgrade Command
 echo -e "${c}Updating and upgrading to finish auto-setup script"; $r

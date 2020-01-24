@@ -43,6 +43,7 @@ net-tools \
 ntp \
 python3.7 \
 python3-pip \
+ruby-full \
 telegram-desktop \
 tlp \
 tlp-rdw \

@@ -68,6 +68,9 @@ echo -e "${c}Update pip"; $r
 sudo pip3 install -U pip
 ( set -x; pip --version )
 
+# Set samsung keyboard backlight as max
+cat /sys/class/leds/samsung::kbd_backlight/max_brightness | sudo tee /sys/class/leds/samsung::kbd_backlight/brightness
+
 # Show Battery Percentage on Top Bar [Debian (gnome)]
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 

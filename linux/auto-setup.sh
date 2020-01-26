@@ -161,21 +161,6 @@ echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> ~/.profile
 ( set -x; yarn -v )
 echo -e "${c}Yarn Installed Successfully."; $r
 
-# Installing Anaconda
-# 
-# echo -e "${c}Installing Anaconda"; $r
-# cd
-# wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
-# bash Anaconda3-2019.07-Linux-x86_64.sh
-# echo -e "${c}Anaconda Installed Successfully."; $r
-
-# Deleting Anaconda3-2019.07-Linux-x86_64.sh
-# 
-# echo -e "${c}Deleting Anaconda3-2019.07-Linux-x86_64.sh"; $r
-# cd
-# rm -rf Anaconda3-2019.07-Linux-x86_64.sh
-# echo -e "${c}Anaconda3-2019.07-Linux-x86_64.sh Deleted Successfully!"; $r
-
 # Deleting auto-setup
 echo -e "${c}Deleting auto-setup"; $r
 cd

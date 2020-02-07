@@ -12,7 +12,7 @@ auto-setup.sh is a simple bash script (compatible with Debian based distribution
 ### Linux (Debian based distributions like Ubuntu)
 
 ```bash
-wget https://tinyurl.com/auto-setup
+wget https://bit.ly/auto-setup
 chmod +x auto-setup
 ./auto-setup
 

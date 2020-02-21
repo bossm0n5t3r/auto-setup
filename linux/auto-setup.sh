@@ -25,13 +25,20 @@ echo -e "${c}Installing vim and setting vim as default editor"; $r
 sudo apt install -y vim
 sudo update-alternatives --config editor
 
+# Installing Google Chrome
+echo -e "${c}Installing Google Chrome"; $r
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt update
+sudo apt install google-chrome-stable
+sudo rm -rf /etc/apt/sources.list.d/google.list
+
 # Installing all the packages I need
 echo -e "${c}Installing complete packages"; $r
 sudo apt install -y \
 apt-transport-https \
 bleachbit \
 build-essential \
-chromium-browser \
 clang-format \
 curl \
 fonts-naver-d2coding \

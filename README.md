@@ -54,7 +54,7 @@ It'll perform the following operations:
 
 - ~~Anaconda~~ (Leave as Comments)
 - Bleachbit
-- Chromium
+- Google Chrome
 - D2Coding font
 - Java
 - LibreOffice

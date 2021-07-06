@@ -191,4 +191,4 @@ echo -e "${c}Now, you should reboot or shutdown now!"; $r
 echo -e "${c}After reboot, you should run after-auto-setup!"; $r
 echo -e "${c}WELCOME TO UBUNTU!"; $r
 
-exit 1
+exit 0

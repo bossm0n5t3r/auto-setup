@@ -115,61 +115,61 @@ sudo apt install -y code
 sudo rm -rf microsoft.gpg
 echo -e "${c}Visual Studio Code Installed Successfully."; $r
 
-# Setting up Java
-echo -e "${c}Setting up Java"; $r
-sudo apt install -y openjdk-13-jdk openjdk-13-doc
-( set -x ; java -version )
-echo "" >> ~/.profile
-echo "# Set JAVA_HOME" >> ~/.profile
-echo "export JAVA_HOME=/usr/lib/jvm/java-13-openjdk-amd64" >> ~/.profile
-echo -e "${c}Java Installed Successfully!"; $r
+# # Setting up Java
+# echo -e "${c}Setting up Java"; $r
+# sudo apt install -y openjdk-13-jdk openjdk-13-doc
+# ( set -x ; java -version )
+# echo "" >> ~/.profile
+# echo "# Set JAVA_HOME" >> ~/.profile
+# echo "export JAVA_HOME=/usr/lib/jvm/java-13-openjdk-amd64" >> ~/.profile
+# echo -e "${c}Java Installed Successfully!"; $r
 
-# Installing vim-plug
-echo -e "${c}Installing vim-plug"; $r
-cd
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-echo -e "${c}vim-plug Installed Successfully!"; $r
+# # Installing vim-plug
+# echo -e "${c}Installing vim-plug"; $r
+# cd
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# echo -e "${c}vim-plug Installed Successfully!"; $r
 
-# Creating Directory Inside $HOME
-echo -e "${c}Creating Directory named 'gitFolders' inside $HOME directory."; $r
-cd
-mkdir gitFolders
+# # Creating Directory Inside $HOME
+# echo -e "${c}Creating Directory named 'gitFolders' inside $HOME directory."; $r
+# cd
+# mkdir gitFolders
 
-# Cloning my git repositories
-echo -e "${c}Cloning my git repositories"; $r
-cd gitFolders
-git clone https://github.com/bossm0n5t3r/dotfiles.git
-git clone https://github.com/bossm0n5t3r/auto-setup.git
-cd
-echo -e "${c}My git repositories Cloned Successfully!"; $r
+# # Cloning my git repositories
+# echo -e "${c}Cloning my git repositories"; $r
+# cd gitFolders
+# git clone https://github.com/bossm0n5t3r/dotfiles.git
+# git clone https://github.com/bossm0n5t3r/auto-setup.git
+# cd
+# echo -e "${c}My git repositories Cloned Successfully!"; $r
 
-# Installing my vim plugins
-echo -e "${c}Installing my vim plugins"; $r
-cd
-cp -rp gitFolders/dotfiles/.vim/vimrc .vim/
-vim .vim/vimrc
-echo -e "${c}My vim plugins Installed Successfully!"; $r
+# # Installing my vim plugins
+# echo -e "${c}Installing my vim plugins"; $r
+# cd
+# cp -rp gitFolders/dotfiles/.vim/vimrc .vim/
+# vim .vim/vimrc
+# echo -e "${c}My vim plugins Installed Successfully!"; $r
 
-# Installing NodeJS
-echo -e "${c}Installing NodeJS"; $r
-cd
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install -y nodejs
-( set -x; nodejs -v )
-echo -e "${c}NodeJS Installed Successfully!"; $r
+# # Installing NodeJS
+# echo -e "${c}Installing NodeJS"; $r
+# cd
+# curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+# sudo apt install -y nodejs
+# ( set -x; nodejs -v )
+# echo -e "${c}NodeJS Installed Successfully!"; $r
 
-# Installing Yarn
-echo -e "${c}Installing Yarn"; $r
-cd
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install -y yarn
-echo "" >> ~/.profile
-echo "# Set Yarn global path" >> ~/.profile
-echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> ~/.profile
-( set -x; yarn -v )
-echo -e "${c}Yarn Installed Successfully."; $r
+# # Installing Yarn
+# echo -e "${c}Installing Yarn"; $r
+# cd
+# curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+# echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+# sudo apt update && sudo apt install -y yarn
+# echo "" >> ~/.profile
+# echo "# Set Yarn global path" >> ~/.profile
+# echo -e "export PATH=\"\$(yarn global bin):\$PATH\"" >> ~/.profile
+# ( set -x; yarn -v )
+# echo -e "${c}Yarn Installed Successfully."; $r
 
 # Deleting auto-setup
 echo -e "${c}Deleting auto-setup"; $r

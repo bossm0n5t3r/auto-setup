@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+# on:
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Run build script
+        run: bash ./linux/auto-setup.sh
+        shell: bash

@@ -50,6 +50,33 @@ tree \
 wget \
 zsh
 
+# Show Battery Percentage on Top Bar [Debian (gnome)]
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+# Change button layout (close,minimize,maximize:) [Debian (gnome)]
+gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:"
+
+# Show clock seconds and weekday [Debian (gnome)]
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+
+# Change default fonts to D2Coding [Debian (gnome)]
+gsettings set org.gnome.desktop.interface font-name 'D2Coding 11'
+gsettings set org.gnome.desktop.interface document-font-name 'D2Coding 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'D2Coding 13'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'D2Coding Bold 11'
+
+# Setting up Git
+echo -e "${c}Setting up Git"; $r
+( set -x; git --version )
+echo -e "${c}Setting up global git config at ~/.gitconfig"; $r
+git config --global color.ui true
+read -p "Enter Your Full Name: " name
+read -p "Enter Your Email: " email
+git config --global user.name "$name"
+git config --global user.email "$email"
+echo -e "${c}Git Setup Successfully!"; $r
+
 # Starting tlp
 echo -e "${c}Starting tlp"; $r
 sudo tlp start

@@ -84,33 +84,6 @@ sudo pip3 install -U pip
 # Set samsung keyboard backlight as max
 cat /sys/class/leds/samsung::kbd_backlight/max_brightness | sudo tee /sys/class/leds/samsung::kbd_backlight/brightness
 
-# Show Battery Percentage on Top Bar [Debian (gnome)]
-gsettings set org.gnome.desktop.interface show-battery-percentage true
-
-# Change button layout [Debian (gnome)]
-gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:"
-
-# Show clock seconds and weekday [Debian (gnome)]
-gsettings set org.gnome.desktop.interface clock-show-seconds true
-gsettings set org.gnome.desktop.interface clock-show-weekday true
-
-# Change default fonts to D2Coding [Debian (gnome)]
-gsettings set org.gnome.desktop.interface font-name 'D2Coding 11'
-gsettings set org.gnome.desktop.interface document-font-name 'D2Coding 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'D2Coding 13'
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'D2Coding Bold 11'
-
-# Setting up Git
-echo -e "${c}Setting up Git"; $r
-( set -x; git --version )
-echo -e "${c}Setting up global git config at ~/.gitconfig"; $r
-git config --global color.ui true
-read -p "Enter Your Full Name: " name
-read -p "Enter Your Email: " email
-git config --global user.name "$name"
-git config --global user.email "$email"
-echo -e "${c}Git Setup Successfully!"; $r
-
 # Setting up Java
 echo -e "${c}Setting up Java"; $r
 sudo apt install -y openjdk-13-jdk openjdk-13-doc

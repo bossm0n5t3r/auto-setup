@@ -3,7 +3,7 @@
 ##################################################################################################
 # Author: bossm0n5t3r                                                                            #
 # Description: Auto setup bash script to setup required programs after auto-setup.sh             #
-# Tested against Debian based distributions like Ubuntu 20.04.                                   #
+# Tested against Debian based distributions like Ubuntu 20.04, 19.10.                            #
 ##################################################################################################
 
 c='\e[32m' # Coloured echo (Green)
@@ -14,6 +14,13 @@ echo -e "${c}Installing oh-my-zsh"; $r
 cd
 sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo -e "${c}oh-my-zsh Installed Successfully."; $r
+echo
+
+# Installing vim-plug
+echo -e "${c}Installing vim-plug"; $r
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo -e "${c}vim-plug Installed Successfully!"; $r
 echo
 
 # Setting up jEnv

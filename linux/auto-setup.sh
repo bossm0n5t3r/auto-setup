@@ -3,7 +3,7 @@
 ##################################################################################################
 # Author: bossm0n5t3r                                                                            #
 # Description: Auto setup bash script to setup required programs after doing fresh install.      #
-# Tested against Debian based distributions like Ubuntu 19.10.                                   #
+# Tested against Debian based distributions like Ubuntu 20.04.                                   #
 ##################################################################################################
 
 c='\e[32m' # Coloured echo (Green)
@@ -34,6 +34,7 @@ build-essential \
 clang-format \
 curl \
 fonts-naver-d2coding \
+gdebi-core \
 git \
 gnome-tweaks \
 intel-microcode \
@@ -113,6 +114,15 @@ sudo apt update -y
 sudo apt install -y code
 sudo rm -rf microsoft.gpg
 echo -e "${c}Visual Studio Code Installed Successfully."; $r
+echo
+
+# Installing Discord
+echo -e "${c}Installing Discord"; $r
+sudo apt update
+wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+sudo gdebi -n ~/discord.deb
+sudo rm -rf ~/discord.deb
+echo -e "${c}Discord Installed Successfully."; $r
 echo
 
 # Deleting auto-setup

@@ -40,8 +40,6 @@ intel-microcode \
 libreoffice \
 net-tools \
 ntp \
-python3.7 \
-python3-pip \
 ruby-full \
 telegram-desktop \
 tlp \
@@ -76,6 +74,23 @@ read -p "Enter Your Email: " email
 git config --global user.name "$name"
 git config --global user.email "$email"
 echo -e "${c}Git Setup Successfully!"; $r
+echo
+
+# Setting up AdoptOpenJDK 16 openj9
+echo -e "${c}Setting up AdoptOpenJDK 16 openj9"; $r
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+sudo apt update
+sudo apt install adoptopenjdk-16-openj9
+echo -e "${c}AdoptOpenJDK 16 openj9 Setup Successfully!"; $r
+echo
+
+# Setting up Kotlin
+echo -e "${c}Setting up Kotlin"; $r
+sudo snap install --classic kotlin
+( set -x; kotlinc -version )
+echo -e "${c}Kotlin Setup Successfully!"; $r
+echo
 
 # Starting tlp
 echo -e "${c}Starting tlp"; $r
@@ -98,12 +113,14 @@ sudo apt update -y
 sudo apt install -y code
 sudo rm -rf microsoft.gpg
 echo -e "${c}Visual Studio Code Installed Successfully."; $r
+echo
 
 # Deleting auto-setup
 echo -e "${c}Deleting auto-setup"; $r
 cd
 rm -rf auto-setup
 echo -e "${c}auto-setup Deleted Successfully!"; $r
+echo
 
 # Final Update and Upgrade Command
 echo -e "${c}Updating and upgrading to finish auto-setup script"; $r

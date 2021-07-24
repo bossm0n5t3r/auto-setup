@@ -3,7 +3,7 @@
 ##################################################################################################
 # Author: bossm0n5t3r                                                                            #
 # Description: Auto setup bash script to setup required programs after doing fresh install.      #
-# Tested against Debian based distributions like Ubuntu 20.04.                                   #
+# Tested against Debian based distributions like Ubuntu 20.04, 19.10.                            #
 ##################################################################################################
 
 c='\e[32m' # Coloured echo (Green)
@@ -146,7 +146,10 @@ chsh -s `which zsh`
 
 # Finish
 echo -e "${c}Now, you should reboot or shutdown now!"; $r
-echo -e "${c}After reboot, you should run after-auto-setup!"; $r
+echo -e "${c}After reboot, run following commands"; $r
+echo -e "${c}$ wget https://bit.ly/after-auto-setup"; $r
+echo -e "${c}$ chmod +x after-auto-setup"; $r
+echo -e "${c}$ ./after-auto-setup"; $r
 echo -e "${c}WELCOME TO UBUNTU!"; $r
 
 exit 0

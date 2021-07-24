@@ -1,10 +1,10 @@
 # auto-setup
 
-# IT WILL BE UPDATED SOON.
+[![CI](https://github.com/bossm0n5t3r/auto-setup/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/bossm0n5t3r/auto-setup/actions/workflows/main.yml) ![ubuntu](https://img.shields.io/badge/ubuntu-20.04-brightgreen) ![ubuntu](https://img.shields.io/badge/ubuntu-19.10-brightgreen)
 
 This reposioty is based on [shubhampathak/autosetup](https://github.com/shubhampathak/autosetup).
 
-auto-setup.sh is a simple bash script (compatible with Debian based distributions like Ubuntu) to install and setup necessary softwares/tools after doing Fresh Install.
+`auto-setup.sh` is a simple bash script (compatible with Debian based distributions like Ubuntu) to install and setup necessary softwares/tools after doing Fresh Install.
 
 > Script is completely based on programming tools as well as some apps I use regularly like Visual Studio Code, Chromium etc.
 > You can Modify it according to your need.
@@ -19,7 +19,9 @@ chmod +x auto-setup
 ./auto-setup
 
 # After reboot,
-bash ~/gitFolders/ubuntu-auto-setup/after-auto-setup.sh
+wget https://bit.ly/after-auto-setup
+chmod +x after-auto-setup
+./after-auto-setup
 ```
 
 ### Windows 10
@@ -45,27 +47,38 @@ It'll perform the following operations:
 1. Delete firefox and default vim.
 2. Install vim and set vim as default editor.
 3. Install all the packages I need.
-4. Python 3.7 default Setup
-5. Setup pip and update
-6. Custom gsettings.
-7. Setup Git Global Config. (It'll ask for your name and email)
-8. Install VSCode, Java etc. (See below list)
-9. Cloning my personal git repositories.
+4. Custom gsettings.
+5. Setup Git Global Config. (It'll ask for your `name` and `email`)
+6. Install some programming languages and tools etc. (See below list)
+7. Cloning my personal git repositories.
 
 ## List
 
-- ~~Anaconda~~ (Leave as Comments)
+### auto-setup
+
 - Bleachbit
 - Google Chrome
 - D2Coding font
-- Java
+- Discord
 - LibreOffice
 - Telegram
-- vim-plug
-- Visual Studio Code
 - zsh
-- My personal git repositories
+
+## Programming languages and tools
+
+### auto-setup
+
+- AdoptOpenJDK 16 openj9
+- Kotlin
+- Visual Studio Code
+- IntelliJ IDEA Community Edition
+
+### after-auto-setup
+
+- vim-plug
+- jEnv
+- pyenv
 
 ## Note
 
-Tested on Ubuntu 19.10, but it should work with other Debian based distributions as well.
+Tested on Ubuntu 20.04, 19.10, but it should work with other Debian based distributions as well.

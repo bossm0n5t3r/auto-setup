@@ -116,12 +116,15 @@ sudo rm -rf microsoft.gpg
 echo -e "${c}Visual Studio Code Installed Successfully."; $r
 echo
 
+# Installing IntelliJ IDEA Community Edition
+echo -e "${c}Installing IntelliJ IDEA Community Edition"; $r
+sudo snap install intellij-idea-community --classic --edge
+echo -e "${c}IntelliJ IDEA Community Edition Installed Successfully."; $r
+echo
+
 # Installing Discord
 echo -e "${c}Installing Discord"; $r
-sudo apt update
-wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-sudo gdebi -n ~/discord.deb
-sudo rm -rf ~/discord.deb
+sudo snap install discord
 echo -e "${c}Discord Installed Successfully."; $r
 echo
 

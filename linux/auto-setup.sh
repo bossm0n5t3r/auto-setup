@@ -81,7 +81,7 @@ echo -e "${c}Setting up AdoptOpenJDK 16 openj9"; $r
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
 sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 sudo apt update
-sudo apt install adoptopenjdk-16-openj9
+sudo apt install -y adoptopenjdk-16-openj9
 echo -e "${c}AdoptOpenJDK 16 openj9 Setup Successfully!"; $r
 echo
 

@@ -102,6 +102,13 @@ sdk install kotlin
 echo -e "${c}Kotlin Setup Successfully!"; $r
 echo
 
+# Setting up Gradle
+echo -e "${c}Setting up Gradle"; $r
+sdk install gradle
+gradle --version
+echo -e "${c}Gradle Setup Successfully!"; $r
+echo
+
 # Starting tlp
 echo -e "${c}Starting tlp"; $r
 sudo tlp start

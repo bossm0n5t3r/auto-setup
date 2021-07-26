@@ -30,6 +30,9 @@ echo '' >> ~/.zshrc
 echo '# jEnv' >> ~/.zshrc
 echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(jenv init -)"' >> ~/.zshrc
+jenv enable-plugin export
+exec $SHELL -l
+jenv doctor
 echo -e "${c}jEnv Setup Successfully!"; $r
 echo
 

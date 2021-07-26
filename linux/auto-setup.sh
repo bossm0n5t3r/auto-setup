@@ -77,6 +77,15 @@ git config --global user.email "$email"
 echo -e "${c}Git Setup Successfully!"; $r
 echo
 
+# Setting up SDKMAN!
+echo -e "${c}Setting up SDKMAN!"; $r
+curl -s https://get.sdkman.io | bash
+exec $SHELL -l
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
+echo -e "${c}SDKMAN! Setup Successfully!"; $r
+echo
+
 # Setting up AdoptOpenJDK 16 openj9
 echo -e "${c}Setting up AdoptOpenJDK 16 openj9"; $r
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
@@ -88,7 +97,7 @@ echo
 
 # Setting up Kotlin
 echo -e "${c}Setting up Kotlin"; $r
-sudo snap install --classic kotlin
+sdk install kotlin
 ( set -x; kotlinc -version )
 echo -e "${c}Kotlin Setup Successfully!"; $r
 echo

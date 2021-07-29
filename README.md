@@ -24,7 +24,7 @@ chmod +x after-auto-setup
 ./after-auto-setup
 ```
 
-### Windows 10
+### Windows 10 (NO LONGER MAINTAINED)
 
 > #### Prerequisite Tools
 >

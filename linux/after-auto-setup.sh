@@ -9,18 +9,16 @@
 c='\e[32m' # Coloured echo (Green)
 r='tput sgr0' #Reset colour after echo
 
-# Installing oh-my-zsh
-echo -e "${c}Installing oh-my-zsh"; $r
-cd
-sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo -e "${c}oh-my-zsh Installed Successfully."; $r
-echo
-
 # Installing vim-plug
 echo -e "${c}Installing vim-plug"; $r
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo -e "${c}vim-plug Installed Successfully!"; $r
+echo
+
+# Complete SDKMAN! installation
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+echo -e "${c}Complete SDKMAN! installation Successfully."; $r
 echo
 
 # Setting up Kotlin
@@ -77,4 +75,11 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 echo -e "${c}If you want to show all the python versions that pyenv knows, run following commands"; $r
 echo -e "${c}$ pyenv install --list | grep \" 3\.\""; $r
+echo
+
+# Installing oh-my-zsh
+echo -e "${c}Installing oh-my-zsh"; $r
+cd
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo -e "${c}oh-my-zsh Installed Successfully."; $r
 echo

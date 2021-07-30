@@ -77,15 +77,6 @@ git config --global user.email "$email"
 echo -e "${c}Git Setup Successfully!"; $r
 echo
 
-# Setting up SDKMAN!
-echo -e "${c}Setting up SDKMAN!"; $r
-curl -s https://get.sdkman.io | bash
-exec $SHELL -l
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk version
-echo -e "${c}SDKMAN! Setup Successfully!"; $r
-echo
-
 # Setting up AdoptOpenJDK 16 openj9
 echo -e "${c}Setting up AdoptOpenJDK 16 openj9"; $r
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
@@ -93,20 +84,6 @@ sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 sudo apt update
 sudo apt install -y adoptopenjdk-16-openj9
 echo -e "${c}AdoptOpenJDK 16 openj9 Setup Successfully!"; $r
-echo
-
-# Setting up Kotlin
-echo -e "${c}Setting up Kotlin"; $r
-sdk install kotlin
-( set -x; kotlinc -version )
-echo -e "${c}Kotlin Setup Successfully!"; $r
-echo
-
-# Setting up Gradle
-echo -e "${c}Setting up Gradle"; $r
-sdk install gradle
-gradle --version
-echo -e "${c}Gradle Setup Successfully!"; $r
 echo
 
 # Starting tlp
@@ -144,13 +121,6 @@ sudo snap install discord
 echo -e "${c}Discord Installed Successfully."; $r
 echo
 
-# Deleting auto-setup
-echo -e "${c}Deleting auto-setup"; $r
-cd
-rm -rf auto-setup
-echo -e "${c}auto-setup Deleted Successfully!"; $r
-echo
-
 # Final Update and Upgrade Command
 echo -e "${c}Updating and upgrading to finish auto-setup script"; $r
 sudo apt update && sudo apt upgrade -y
@@ -160,12 +130,6 @@ sudo apt --fix-broken install -y
 echo -e "${c}Changing bash shell to zsh"; $r
 chsh -s `which zsh`
 
-# Finish
-echo -e "${c}Now, you should reboot or shutdown now!"; $r
-echo -e "${c}After reboot, run following commands"; $r
-echo -e "${c}$ wget https://bit.ly/after-auto-setup"; $r
-echo -e "${c}$ chmod +x after-auto-setup"; $r
-echo -e "${c}$ ./after-auto-setup"; $r
-echo -e "${c}WELCOME TO UBUNTU!"; $r
-
-exit 0
+# Setting up SDKMAN!
+echo -e "${c}Setting up SDKMAN!"; $r
+curl -s https://get.sdkman.io | bash

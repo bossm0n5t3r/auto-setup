@@ -23,6 +23,18 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo -e "${c}vim-plug Installed Successfully!"; $r
 echo
 
+# Setting up Kotlin
+echo -e "${c}Setting up Kotlin"; $r
+sdk install kotlin
+echo -e "${c}Kotlin Setup Successfully!"; $r
+echo
+
+# Setting up Gradle
+echo -e "${c}Setting up Gradle"; $r
+sdk install gradle
+echo -e "${c}Gradle Setup Successfully!"; $r
+echo
+
 # Setting up jEnv
 echo -e "${c}Setting up jEnv"; $r
 git clone https://github.com/jenv/jenv.git ~/.jenv
@@ -30,9 +42,9 @@ echo '' >> ~/.zshrc
 echo '# jEnv' >> ~/.zshrc
 echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(jenv init -)"' >> ~/.zshrc
-jenv enable-plugin export
-exec $SHELL -l
-jenv doctor
+# jenv enable-plugin export
+# exec $SHELL -l
+# jenv doctor
 echo -e "${c}jEnv Setup Successfully!"; $r
 echo
 
@@ -65,11 +77,4 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 echo -e "${c}If you want to show all the python versions that pyenv knows, run following commands"; $r
 echo -e "${c}$ pyenv install --list | grep \" 3\.\""; $r
-echo
-
-# Setting Visual Studio Code
-echo -e "${c}Setting Visual Studio Code"; $r
-code
-read -p "Press ENTER to continue"
-echo -e "${c}Visual Studio Code Setting Successfully."; $r
 echo
